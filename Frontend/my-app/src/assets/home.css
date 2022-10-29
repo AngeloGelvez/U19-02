@@ -1,0 +1,80 @@
+* {
+    font-size: 18px;
+    font-weight: lighter;
+    letter-spacing: .5px;
+}
+
+.menu-nav {
+    background-color: #393D40;
+}
+
+.miLogo {
+    color: #D69764;
+    padding: 50px;
+    font-size: 25px;
+}
+
+/*LADO DERECHO MENU*/
+.text1 {
+    padding: 15px 20px;
+    color: #EE7500;
+    right: 200px;
+}
+
+.text2 {
+    padding: 15px 20px;
+    color: #EE7500;
+    right: 320px;
+}
+
+.posicion {
+    z-index: 2;
+    position: absolute;
+    top: 10px;
+}
+
+.boton {
+    right: 10px;
+}
+
+.lista-menu {
+    padding: 0px 30px;
+}
+
+/*SEGUNDA SECCIÓN HJOME*/
+.contenedor {
+    display: flex;
+}
+
+.aside1 {
+    background-color: #393D40;
+    color: #F1EDEA;
+    padding: 150px 200px;
+    height: auto;
+    width: 70%; 
+}
+
+.aside1 p {
+    font-size: 40px;
+    font-weight: lighter;
+    width: 70%;
+}
+
+.aside1 button {
+    background-color: #D69764;
+    color: #393D40;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.aside2 {
+    z-index: 1;
+    position: relative;
+    top: -80px;
+    margin-bottom: -80px;
+}
+
+.aside2 img{
+    height: 110vh;
+    width: 40vw;
+}
