@@ -30,6 +30,7 @@ async function crearCliente(req = request, res = response) {
   }
 }
 
+//FUNCION PARA ENCONTRAR TODOS LOS CLIENTES
 async function getClientes(req = request, res = response) {
   const { id, email, numDocumento, departamento } = req.query
 
@@ -43,10 +44,11 @@ async function getClientes(req = request, res = response) {
 
 }
 
+//FUNCIONA PARA BUSCAR EL CLIENTE POR EL ID
 async function getCliente(req = request, res = response) {
   const { id } = req.params
 
-  const cliente = await ClienteModel.find({id})
+  const cliente = await ClienteModel.findById(id)
 
   res.send(cliente)
 }

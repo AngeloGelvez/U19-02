@@ -1,9 +1,13 @@
 const {request, response} = require("express")
 const ProductoModel = require("../models/producto")
+const { verify } = require("jsonwebtoken")
 const path = require("path")
 
-function guardarImagen(req = request, res = response){
+async function guardarImagen(req = request, res = response) {
+  const { id } = req.params
 
+  // GET del producto
+  const producto = await ProductoModel.findById(id)
 
   if (!req.files || Object.keys(req.files).length === 0) {
     return res.status(400).json({ mensaje: "No se encontro el archivo" })
@@ -11,16 +15,20 @@ function guardarImagen(req = request, res = response){
 
   // Extrae el archivo segun el nombre (en este caso "archivo")
   const archivo = req.files.imagen
-  const uploadPath = path.join(__dirname, "../imagenes/", archivo.name)
+  const rutaDeCarga = path.join(__dirname, "../imagenes/", archivo.name)
 
   // Usa el metodo mv() para colocar el archivo en cualquier parte del backend
-  archivo.mv(uploadPath, (error) => {
+  archivo.mv(rutaDeCarga, (error) => {
     if (error) return res.status(500).send(error)
+
+    // CARGA EL ARCHIVO
+    producto.imagen = archivo.name
+    producto.save()
 
     res.send("Archivo cargado corectamente")
   })
-
 }
+
 
 
 async function guardarProducto(req = request, res = response) {

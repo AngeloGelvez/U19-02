@@ -1,0 +1,45 @@
+.principal {
+    background-image: url(./img_login.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}   
+
+.caja-login {
+    width: 30%;
+}
+
+.titulo {
+    color: #D69764;
+    font-size: 40px;
+}
+
+.titulo b {
+    font-size: 25px;
+}
+
+/*FORMULARIO SECCION*/
+.cuerpo {
+    padding: 50px 30px;
+}
+
+/*FORMULARION SECCION LOGIN RECUERDAME*/
+.envio-form {
+    margin: 30px 0px;
+}
+
+.check-rec {
+    margin: 0px 15px;
+    font-size: 15px;
+    font-weight: lighter;
+    font-family: sans-serif;
+}
+
+.btn-login button{
+    background-color: #EE7500;
+    color: #ffff;
+    font-weight: lighter;
+}
+
+.text a {
+    color: #EE7500;
+}

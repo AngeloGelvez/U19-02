@@ -6,7 +6,7 @@ const conexionDB = require("./database")
 
 class Server {
   constructor() {
-    this.port = 3000
+    this.port = 3001
     this.app = express()
 
     // MIDDLEWARES
@@ -29,6 +29,7 @@ class Server {
 
     this.app.use( "/cliente", routerCliente )
     this.app.use( "/producto", routerProducto )
+    this.app.use( "/auth", require("../routes/auth") )
 
   }
 }

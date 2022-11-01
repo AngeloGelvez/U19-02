@@ -10,7 +10,7 @@ routerProducto.put("", modificarProducto)
 routerProducto.delete("", borrarProducto)
 routerProducto.post("", guardarProducto )
 routerProducto.get("/imagen", getImagenProducto )
-routerProducto.post("/imagen", guardarImagen )
+routerProducto.post("/imagen/:id", guardarImagen )
 routerProducto.get("/:id", getProducto)
 
 module.exports = routerProducto

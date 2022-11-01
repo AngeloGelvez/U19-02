@@ -43,8 +43,7 @@ export default function Home() {
           </li>
         </ul>
       </nav>
-
-      {/*SEGUNDA PARTE DE MI NAVEGACIÓN*/}
+      
       <div className="wrapper contenedor">
         <aside className="aside1">
           <p>
