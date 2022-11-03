@@ -22,12 +22,12 @@ export default function Home() {
             </a>
           </li>
           <li className="nav d-none d-sm-inline-block">
-            <a href="#" className="nav text2 posicion">
+            <a href="/login" className="nav text2 posicion">
               Ingresar
             </a>
           </li>
           <li className="nav d-none d-sm-inline-block">
-            <a href="#" className="nav-link posicion boton">
+            <a href="/register" className="nav-link posicion boton">
               <button
                 type="button"
                 className="btn"

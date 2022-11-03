@@ -5,3 +5,11 @@ Y SOLO SERIA IMPORTAR EL App.css
 
 /*La importaciones buscan directamente en la carpeta de node_modules*/
 @import 'admin-lte/dist/css/adminlte.css';
+
+
+/*ESTILO DE LOGIN.JS CUADRO DE ERROR*/
+.cuadroError {
+    position: absolute;
+    top: 0;
+    right: 0;
+}

@@ -1,5 +1,6 @@
 const express = require("express")
 const fileUpload = require("express-fileupload")
+const cors = require("cors")
 const routerCliente = require("../routes/cliente")
 const routerProducto = require("../routes/producto")
 const conexionDB = require("./database")
@@ -15,6 +16,7 @@ class Server {
       useTempFiles : true,
       tempFileDir : '/tmp/'
     }))
+    this.app.use( cors() )
   
     this.app.listen(this.port, () => {
       console.log("se esta ejecutando la app puerto:",this.port)
