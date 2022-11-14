@@ -1,27 +1,37 @@
 //IMPORTACIÓN DE ESTILOS
 import Home from "./pages/admin/home";
 import Login from "./pages/auth/login";
+import Perfil from "./pages/user/perfil";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import PrivateRoute from "./config/private";
 import Register from "./pages/auth/register";
+import Menu from "./pages/user/menu";
+import Main from "./pages/user/main";
 
 function App() {
+  /*
+  Aca es donde estan las rutas protegidas, solo se acceden a ellas por el token
+  <PrivateRoute>
+    <Home />
+  </PrivateRoute>
+   */
   return (
     <div>
       <Routes>
-        {/*Aca va mi menu*/}
-        <Route
-          path=""
-          element={
-            <PrivateRoute>
-              <Home />
-            </PrivateRoute>
-          }
-        />
+        {/*Aca va mi página principal*/}
+        <Route path="/" element={<Home />}/>
 
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+
+        <Route 
+        path="/home" 
+        element={<PrivateRoute><Menu /></PrivateRoute>} 
+        > 
+          <Route path="perfil" element={<PrivateRoute><Perfil /></PrivateRoute>} />
+          <Route path="main" element={<PrivateRoute><Main /></PrivateRoute>} />
+        </Route>
       </Routes>
 
       {/*FOOTER DE MI PAGINA WEB*/}

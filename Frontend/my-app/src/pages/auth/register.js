@@ -1,6 +1,6 @@
 import axios from "axios";
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../../assets/register.css"
 
 export default function Register() {
@@ -37,9 +37,9 @@ export default function Register() {
         <div className="register-box" style={{width: "40%"}}>
         <div className="card card-outline card-primary">
             <div className="card-header text-center">
-            <a href="../../index2.html" className="h1 titulo">
+            <Link to="/" className="h1 titulo">
                 <b>MiDulceOnline</b>
-            </a>
+            </Link>
             </div>
             <div className="card-body">
             <p className="login-box-msg">¡Registrate!</p>
@@ -87,7 +87,7 @@ export default function Register() {
                     </div>
                 </div>
                 <div className="input-group mb-3">
-                    <select class="custom-select rounded-0" id="exampleSelectRounded0" name="documentoUsu">
+                    <select className="custom-select rounded-0" id="documento" name="documentoUsu">
                         <option defaultChecked value=" ">Tipo Documento</option>
                         <option value="CEDULA">Cedula</option>
                         <option value="TARJETA">Tarjeta</option>
@@ -100,7 +100,7 @@ export default function Register() {
                     </div>
                 </div>
                 <div className="input-group mb-3">
-                    <select class="custom-select rounded-0" id="exampleSelectRounded0" name="tipoUsu">
+                    <select className="custom-select rounded-0" id="tipoUsuario" name="tipoUsu">
                         <option defaultChecked value=" ">Tipo Usuario</option>
                         <option value="CLIENTE">Cliente</option>
                         <option value="PROVEEDOR">Proveedor</option>
@@ -113,7 +113,7 @@ export default function Register() {
                     </div>
                 </div>
                 <div className="input-group mb-3" hidden>
-                    <select class="custom-select rounded-0" id="exampleSelectRounded0" name="estadoUsu">
+                    <select className="custom-select rounded-0" id="estado" name="estadoUsu">
                         <option defaultChecked value="ACTIVO">Activo</option>
                         <option value="BLOQUEADO">Bloqueado</option>
                     </select>
@@ -152,7 +152,7 @@ export default function Register() {
                     </div>
                 </div>
                 <div className="input-group mb-3">
-                    <select class="custom-select rounded-0" id="exampleSelectRounded0" name="deparUsu">
+                    <select className="custom-select rounded-0" id="departamento" name="deparUsu">
                         <option defaultChecked value=" ">Departamento</option>
                         <option value="CLIENTE">Santander</option>
                         <option value="PROVEEDOR">Cundinamarca</option>
@@ -213,8 +213,8 @@ export default function Register() {
                         value="agree"
                         required
                     /> 
-                    <label for="agreeTerms" className="p-1" >
-                        Acepto los <a href="#">terminos y condiciones</a>
+                    <label className="p-1" >
+                        Acepto los <Link to="#">terminos y condiciones</Link>
                     </label>
                     </div>
                 </div>
@@ -226,9 +226,9 @@ export default function Register() {
                 </div>
                 </div>
             </form>
-            <a href="/login" className="text-center login-rg">
+            <Link to="/login" className="text-center login-rg">
                 ¿Ya tienes una cuenta? Inicia sesión.
-            </a>
+            </Link>
             </div>
         </div>
         </div>

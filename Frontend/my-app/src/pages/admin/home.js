@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../../assets/home.css";
 import image from "../../assets/img_home.jpg";
 
@@ -9,25 +10,25 @@ export default function Home() {
       <nav className="navbar navbar-expand menu-nav">
         <ul className="navbar-nav">
           <li className="nav-item d-none d-sm-inline-block">
-            <a href="../../index3.html" className="miLogo">
+            <Link to="/" className="miLogo">
               MiDulceOnline
-            </a>
+            </Link>
           </li>
         </ul>
 
         <ul className="navbar-nav ml-auto lista-menu">
           <li className="nav d-none d-sm-inline-block">
-            <a href="../../index3.html" className="nav text1 posicion">
+            <Link className="nav text1 posicion">
               Nosotros
-            </a>
+            </Link>
           </li>
           <li className="nav d-none d-sm-inline-block">
-            <a href="/login" className="nav text2 posicion">
+            <Link to="/login" className="nav text2 posicion">
               Ingresar
-            </a>
+            </Link>
           </li>
           <li className="nav d-none d-sm-inline-block">
-            <a href="/register" className="nav-link posicion boton">
+            <Link to="/register" className="nav-link posicion boton">
               <button
                 type="button"
                 className="btn"
@@ -39,7 +40,7 @@ export default function Home() {
               >
                 Registrarme
               </button>
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

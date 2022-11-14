@@ -1,0 +1,20 @@
+.backg {
+    background-color: #393D40;
+}
+
+.texto {
+    color: #f1edea;
+}
+
+.desplegable {
+    background-color: #ffffff;
+    position: absolute;
+    border-radius: 5px;
+}
+
+.desplegable2 {
+    background-color: #ffffff;
+    left: -90px;
+    position: absolute;
+    border-radius: 5px;
+}

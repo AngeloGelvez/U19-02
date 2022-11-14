@@ -3,7 +3,7 @@ import "../../App.css";
 import "../../assets/login.css";
 import registro from "./register";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 /*
 NOMBRE DE LA PRIMERA LETRA DE LA FUNCION DEBE SER EN MAYUSCULA 
@@ -21,7 +21,7 @@ export default function Login() {
         email: correo.value,
         password: contrasena.value,
       });
-      navigate("/");
+      navigate("/home/main");
       localStorage.setItem("token", res.data.token);
     } catch (error) {
       document.getElementById("cuadroAlert").removeAttribute("hidden");
@@ -33,9 +33,9 @@ export default function Login() {
       <div className="caja-login">
         <div className="card card-outline">
           <div className="card-header text-center">
-            <a href="#" className="titulo">
+            <Link to="/" className="titulo">
               <b>MiDulceOnline</b>
-            </a>
+            </Link>
           </div>
           <div className="cuerpo">
             <form onSubmit={formularioLogin}>
@@ -74,9 +74,9 @@ export default function Login() {
               <a href="forgot-password.html">He olvidado mi contraseña</a>
             </p>
             <p className="mb-0 text">
-              <a href="/register" className="text-center">
+              <Link to="/register" className="text-center">
                 ¿Eres nuevo? Registrate
-              </a>
+              </Link>
             </p>
           </div>
         </div>
